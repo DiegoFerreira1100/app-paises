@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: #f5f5f5;
+    padding: 2rem;
+    min-height: 100vh;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+body > div:first-child {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #1a1a1a;
+}
+
+/* Form */
+#formCadastro {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Input fields */
+#nome,
+#senha {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+#nome:focus,
+#senha:focus {
+    outline: none;
+    border-color: #007aff;
+}
+
+#nome::placeholder,
+#senha::placeholder {
+    color: #aaa;
+}
+
+/* Button */
+button[type="submit"] {
+    width: 100%;
+    background: #007aff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Message */
+#mensagem {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #ff3b30;
+    text-align: center;
+    min-height: 1.5rem;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Empty state */
+#mensagem:empty {
+    display: none;
+}
+
+/* Success message (pode ser usado no JS) */
+#mensagem.sucesso {
+    color: #34c759;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+    
+    body > div:first-child {
+        padding: 1rem;
+    }
+    
+    #formCadastro {
+        padding: 1.5rem;
+    }
+}
